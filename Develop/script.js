@@ -4,7 +4,7 @@
 $(function () {
 // TODO: Add code to display the current date in the header of the page.
   function displayCurrentDate () {
-    let displayCurrentDate = dayjs().format('YYYY MMMM DD HH:mm:ss Z');
+    let displayCurrentDate = dayjs().format("YYYY MMMM DD HH:mm:ss Z");
     $("#currentDay").text(displayCurrentDate);
     return displayCurrentDate;
   }
@@ -16,10 +16,18 @@ $(function () {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
-  $(".saveBtn").on('click', function () {
-    const timeBlock = $(this).parent().attr('id');
-    const timeInput = $(this).siblings('textarea').val();
+
+  $(".saveBtn").on("click", function () {
+    const timeBlock = $(this).parent().attr("id");
+    const timeInput = $(this).siblings("textarea").val();
     localStorage.setItem(timeBlock, timeInput);
+  });
+  $(".time-block").each (function () {
+    const inputID = $(this).attr("id");
+    const savedInput = localStorage.getItem(inputID);
+    if (savedInput) {
+      $(this).children("textarea").val(savedInput);
+    }
   });
 
 
