@@ -7,10 +7,13 @@ This calendar will keep track of all your events in you work hours from 9 AM to 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+Please reference to the screenshot below. <br>
+Above the planner will display the current date and time in your local time zone. <br>
+If the hour has passed, the hour block will display grey. <br>
+If the hour is the current hour, the block will display red. <br>
+If the hour has yet to pass, the block will display green.<br>
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+![Example Screenshot](assets/Screenshot%202023-09-18%20114512.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+
+
